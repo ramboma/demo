@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/user/list/userlist",
+    "pages/user/detail/userdetail",
+    "pages/mine/info/mineinfo",
+    "pages/message/list/messagelist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "测试demo",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#56abe4",
+    "backgroundColor": "#ddd",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/user/list/userlist",
+        "iconPath": "images/tabbar/discover1.png",
+        "selectedIconPath": "images/tabbar/discover2.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath":"pages/message/list/messagelist",
+        "iconPath": "images/tabbar/shop1.png",
+        "selectedIconPath": "images/tabbar/shop2.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/info/mineinfo",
+        "iconPath": "images/tabbar/settings1.png",
+        "selectedIconPath": "images/tabbar/settings2.png",
+        "text": "我"
+      }
+    ],
+    "position": "bottom"
+  }
+}
