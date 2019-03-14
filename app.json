@@ -3,6 +3,8 @@
     "pages/user/list/userlist",
     "pages/user/detail/userdetail",
     "pages/mine/info/mineinfo",
+    "pages/index/index",
+    "pages/logs/logs",
     "pages/message/list/messagelist"
   ],
   "window": {

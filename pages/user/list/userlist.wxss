@@ -1,1 +1,14 @@
 /* pages/user/list/userlist.wxss */
+.listcontent{
+  display:flex;
+  text-align: center;
+  flex-direction: row;
+}
+.list-left{
+  flex:1;
+  height:50px;
+}
+.list-right-content{
+  flex:4;
+  flex-direction: column;
+}

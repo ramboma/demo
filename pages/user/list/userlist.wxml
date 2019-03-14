@@ -1,2 +1,11 @@
 <!--pages/user/list/userlist.wxml-->
-<text>pages/user/list/userlist.wxml</text>
+<view class="listcontent" wx:for="{{userlist}}">
+        <view class="list-left">
+            <image src="{{item.image}}" style="width:45px;height:45px"></image>
+        </view>
+        <view class="list-right-content">
+            <view class="flex-index"><navigator url="/pages/user/detail/userdetail">{{item.name}}</navigator></view>
+            <view class="flex-index">{{item.age}}</view>
+            <view class="flex-index">{{item.address}}</view>
+        </view>
+</view>
