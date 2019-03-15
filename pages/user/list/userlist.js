@@ -79,9 +79,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.loading=true;
+    this.loading = true;
     this.getpage();
-    this.loading=false;
+    this.loading = false;
   },
 
   /**

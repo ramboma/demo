@@ -1,2 +1,8 @@
 <!--pages/user/detail/userdetail.wxml-->
 <text>pages/user/detail/userdetail.wxml</text>
+<button class="btn" type="default" loading="{{loading}}" disabled="{{disabled}}" bindtap="showlocal">
+    按钮文本
+</button>
+<button class="btn" type="default" loading="{{loading}}" disabled="{{disabled}}" bindtap="showuserinfo">
+    获取用户信息
+</button>

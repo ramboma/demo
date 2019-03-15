@@ -7,6 +7,37 @@ Page({
   data: {
 
   },
+  showuserinfo:function(){
+    wx.request(
+      {
+        url:'http://minip1.mayuhan.top/user',
+        head:{
+          'content-type':'application/json'
+        },
+        success(res){
+          console.log(res);
+        }
+      }
+    );
+  },
+  showlocal:function(){
+    // 查看是否授权
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success(res) {
+              console.log(res.userInfo)
+            }
+          })
+        }
+      },
+      fail(failmsg){
+        console.log(failmsg);
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
