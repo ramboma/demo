@@ -1,0 +1,36 @@
+<view class="container">
+<h3 class=" text-center">Messaging</h3>
+<button  type="default" bindtap="connect">连接</button>
+<button  type="default" bindtap="disconnect">断开连接</button>
+<button  type="default" bindtap="sayhello">sayhello</button>
+<view class="messaging">
+      <view class="inbox_msg">
+        
+        <view class="mesgs">
+          <view class="msg_history">
+            
+            <view class="incoming_msg">
+              <view class="incoming_msg_img"> 
+                <image src="https://ptetutorials.com/images/user-profile.png" style="width:10px;height:10px" alt="sunil" /> 
+              </view>
+              <view class="received_msg">
+                <view class="received_withd_msg">
+                  <text>We work directly with our designers and suppliers,
+                    and sell direct to you, which means quality, exclusive
+                    products, at a price anyone can afford.</text>
+                  <text class="time_date"> 11:01 AM    |    Today</text></view>
+              </view>
+            </view>
+          </view>
+          <view class="type_msg">
+            <view class="input_msg_write">
+              <input type="text" class="write_msg" placeholder="Type a message" />
+              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+            </view>
+          </view>
+        </view>
+      </view>
+</view>
+</view>
+      
+      

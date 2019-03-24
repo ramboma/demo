@@ -5,7 +5,9 @@
     "pages/mine/info/mineinfo",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/message/list/messagelist"
+    "pages/message/list/messagelist",
+    "pages/user/login/login",
+    "pages/message/show/chat"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +28,7 @@
         "text": "推荐"
       },
       {
-        "pagePath":"pages/message/list/messagelist",
+        "pagePath": "pages/message/list/messagelist",
         "iconPath": "images/tabbar/shop1.png",
         "selectedIconPath": "images/tabbar/shop2.png",
         "text": "消息"

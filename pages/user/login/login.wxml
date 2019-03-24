@@ -1,0 +1,7 @@
+<view>
+<form bindsubmit='searchBox'>
+      <input type='text' class='userBox' placeholder="username" name='username'></input>
+      <input type='text' class='pwdBox' placeholder="password" name='pwd'></input>
+      <button class='login' form-type='submit'>登录</button>
+  </form>
+</view>

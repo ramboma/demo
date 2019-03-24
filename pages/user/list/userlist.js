@@ -7,16 +7,12 @@ Page({
   data: {
     userlist: []
   },
-  initdata: function () {
-    this.data.userlist = [];
-    this.getpage();
-  },
-  getpage: function () {
+  getpage: function (userlist) {
     var currentuserlist = this.data.userlist;
-    for (var userindex = 0; userindex < 10; userindex++) {
+    for (var userindex = 0; userindex < userlist.length; userindex++) {
       var demodata = {
-        "name": "rambo",
-        "age": "30",
+        "name": userlist[userindex].name,
+        "age": userlist[userindex].age,
         "image": "/images/tabbar/shop1.png",
         "address": "北京朝阳区"
       };
@@ -30,7 +26,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.initdata();
+    var that=this;
+    wx.request(
+      {
+        url:'http://localhost:8080/v1/user/list',
+        success:function(res)
+        {
+          console.log(res);
+          if(res.data.date.length==0)
+          {
+            wx.redirectTo({url:"/pages/user/login/login"})
+          }
+          else
+          {
+            that.getpage(res.data.date);
+          }
+        }
+      }
+    );
   },
 
   /**
