@@ -28,10 +28,7 @@ Page({
         method:'POST',
         success:function(res)
         {
-          wx.switchtab('/pages/user/list/userlist')
-        }
-      }
-    );
+          wx.switchTab('/pages/user/list/userlist') } });
     //显示用户列表页
   },
 
