@@ -28,10 +28,13 @@ Page({
         method:'POST',
         success:function(res)
         {
-          wx.switchTab('/pages/user/list/userlist') } });
+          console.log(res);
+          wx.setStorage({key:'token',data:res.data.date})
+          wx.switchTab({url:'/pages/user/list/userlist'});
+        }
     //显示用户列表页
+  })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
