@@ -20,7 +20,7 @@ Page({
     console.log(this.data.pwd);
     wx.request(
       {
-        url:'http://localhost:8080/v1/user/add',
+        url:'http://localhost:8080/v1/user/login',
         data:{
           name:this.data.username,
           age:30
