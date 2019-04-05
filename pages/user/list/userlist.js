@@ -9,6 +9,7 @@ Page({
   },
   getpage: function (userlist) {
     var currentuserlist = this.data.userlist;
+    if(userlist==null) return;
     for (var userindex = 0; userindex < userlist.length; userindex++) {
       var demodata = {
         "name": userlist[userindex].name,
@@ -33,14 +34,22 @@ Page({
         success:function(res)
         {
           console.log(res);
+          if(res.data.length==null)
+          {
+            wx.redirectTo({url:"/pages/user/login/login"})
+            return;
+          }
+          if(res.data.date==null)
+          {
+            wx.redirectTo({url:"/pages/user/login/login"})
+            return;
+          }
           if(res.data.date.length==0)
           {
             wx.redirectTo({url:"/pages/user/login/login"})
+            return;
           }
-          else
-          {
-            that.getpage(res.data.date);
-          }
+          that.getpage(res.data.date);
         }
       }
     );

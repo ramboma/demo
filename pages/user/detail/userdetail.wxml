@@ -5,4 +5,5 @@
 </button>
 <button class="btn" type="default" loading="{{loading}}" disabled="{{disabled}}" bindtap="showuserinfo">
     获取用户信息
+
 </button>
